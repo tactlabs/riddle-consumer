@@ -13,10 +13,12 @@ http://0.0.0.0:8080/consumer
 @app.route('/consumer')
 def api_riddle():
 
-    name = request.get("url")
+    URL = "https://reqres.in/api/users?page=2"
 
-    
-    return 
+    result = requests.get(URL)
+    # name = request.get("url")
+
+    return result
 
 if __name__ == "__main__":
     app.run( debug = True,host="0.0.0.0",port = 3005)
