@@ -10,12 +10,12 @@ http://0.0.0.0:8080/consumer
 
 """
 
-@app.route('/consumer')
+@app.route('/')
 def api_riddle():
 
     URL = "https://reqres.in/api/users?page=2"
 
-    result = requests.get(URL)
+    result = requests.get(URL).content
     # name = request.get("url")
 
     return result
